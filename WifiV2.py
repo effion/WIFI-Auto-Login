@@ -10,18 +10,18 @@ try:
     from infi.systray import SysTrayIcon
     from PIL import Image
 except(ModuleNotFoundError):
-    messagebox.showinfo("WifiV2", "Program terminated successfully.")
-    time.sleep(10)
-    os.system('taskkill /F /IM python.exe')
+    messagebox.showinfo("WifiV2", "Module(s) not found. Program will terminate in 5 seconds, please run install.bat again.")
+    time.sleep(5)
+    os.system('taskkill /F /T /IM pyw.exe')
+    
 
 messagebox.showinfo("WifiV2", "Running in background...")
 
 
 try:
-    filename = r'favicon.png'
-    img = Image.open(filename)
-    img.save('favicon.ico')
-    os.remove('favicon.png')
+    with Image.open(r'favicon.png') as img:
+        img.save('favicon.ico')
+        os.remove('favicon.png')
 except(FileNotFoundError):
     pass
 
@@ -33,8 +33,7 @@ except(FileNotFoundError):
 def quitprg(systray):
     messagebox.showinfo("WifiV2", "Program terminated successfully.")
     SysTrayIcon.shutdown
-    os.system('taskkill /F /IM python.exe')
-
+    os.system('taskkill /F /T /IM pyw.exe')
 
 systray = SysTrayIcon("favicon.ico", "WifiV2", on_quit=quitprg)
 systray.start()
