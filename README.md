@@ -29,7 +29,7 @@ Download the latest release [here](https://github.com/effion/WIFI-Auto-Login/rel
  
 
 ## HOW TO USE
-1. Download the latest release
+1. Download the latest [release](https://github.com/effion/WIFI-Auto-Login/releases)
 2. Install from setup
 3. Let the batch file do its thing
 4. Enter Bennett username and password when prompted<br/>
