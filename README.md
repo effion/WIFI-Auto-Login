@@ -7,11 +7,11 @@ Program that tries to instantly connect to the Wifi login page as soon as it is 
 ###### json<br/>
 ###### os<br/>
 ###### sys<br/>
-###### Pillow<br/>
 ###### tkinter
 
 ## Uses the following external Python modules (requirements.txt):
 ###### requests<br/>
+###### Pillow<br/>
 ###### infi.systray
 
 
